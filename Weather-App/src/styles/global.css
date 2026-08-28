@@ -1,0 +1,341 @@
+/* ===== CONTAINER ===== */
+.search-container {
+  margin-bottom: 28px;
+}
+
+/* ===== HEADER ===== */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.title-icon {
+  font-size: 2.6rem;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  background: linear-gradient(135deg, #4facfe 0%, #00d2ff 50%, #6dd5fa 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08) rotate(15deg);
+}
+
+/* ===== SEARCH FORM ===== */
+.search-form {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.search-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 4px 4px 4px 20px;
+  transition: all 0.4s ease;
+  min-width: 280px;
+  max-width: 100%;
+}
+
+.search-icon {
+  font-size: 1rem;
+  opacity: 0.5;
+  margin-right: 8px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  padding: 14px 8px;
+  font-size: 1rem;
+  min-width: 120px;
+}
+
+.search-input:disabled {
+  opacity: 0.5;
+}
+
+.search-button {
+  background: linear-gradient(135deg, #4facfe, #00d2ff);
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 60px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-button:hover:not(:disabled) {
+  transform: scale(1.04);
+  box-shadow: 0 8px 30px rgba(79, 172, 254, 0.4);
+}
+
+.search-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.history-toggle {
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.history-toggle:hover {
+  opacity: 0.8;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.unit-toggle,
+.geo-button {
+  padding: 12px 20px;
+  border-radius: 60px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.unit-toggle svg,
+.geo-button svg {
+  font-size: 1rem;
+}
+
+.geo-button {
+  color: #4facfe;
+}
+
+.geo-button:hover {
+  box-shadow: 0 8px 25px rgba(79, 172, 254, 0.2);
+}
+
+/* ===== HISTORY DROPDOWN ===== */
+.history-dropdown {
+  border-radius: 16px;
+  padding: 8px 0;
+  margin-top: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 18px;
+  font-size: 0.75rem;
+  opacity: 0.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.clear-history {
+  background: transparent;
+  border: none;
+  color: #ff6b6b;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clear-history:hover {
+  color: #ff4444;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.history-icon {
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+
+/* ===== POPULAR CITIES ===== */
+.popular-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.popular-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.popular-cities {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.city-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 60px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.city-chip:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.city-chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.city-emoji {
+  font-size: 1.2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+  }
+  
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .search-wrapper {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .action-buttons {
+    justify-content: stretch;
+  }
+  
+  .unit-toggle,
+  .geo-button {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .popular-cities {
+    justify-content: center;
+  }
+  
+  .app-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .theme-toggle {
+    padding: 8px 14px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .title-icon {
+    font-size: 1.6rem;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .city-chip {
+    padding: 6px 16px;
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+  
+  .city-emoji {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,231 @@
+.settingsPage {
+  padding: 10px 0 20px 0;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 80vh; /* ✅ Increased from 70vh to 80vh */
+}
+
+.pageTitle {
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #e8edf5;
+  flex-shrink: 0;
+}
+
+body.light .pageTitle {
+  color: #1a2332;
+}
+
+/* ✅ Bigger setting groups */
+.settingGroup {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 28px 32px; /* ✅ Increased padding */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 170px; /* ✅ Increased from 140px to 170px */
+}
+
+body.light .settingGroup {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.settingGroup:not(:last-child) {
+  margin-bottom: 18px; /* ✅ Increased from 16px to 18px */
+}
+
+.settingLabel {
+  font-size: 1.1rem; /* ✅ Increased from 1rem */
+  font-weight: 500;
+  margin-bottom: 16px; /* ✅ Increased from 14px */
+  color: #e8edf5;
+}
+
+body.light .settingLabel {
+  color: #1a2332;
+}
+
+.languageOptions,
+.themeOptions {
+  display: flex;
+  gap: 16px; /* ✅ Increased from 14px */
+  flex-wrap: wrap;
+}
+
+/* ✅ Bigger buttons */
+.langBtn,
+.themeBtn {
+  padding: 14px 32px; /* ✅ Increased padding */
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: #c8d0dc;
+  font-size: 1rem; /* ✅ Increased from 0.95rem */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 130px; /* ✅ Increased from 120px */
+  text-align: center;
+}
+
+body.light .langBtn,
+body.light .themeBtn {
+  color: #1a2332;
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.langBtn:hover,
+.themeBtn:hover {
+  background: rgba(79, 172, 254, 0.08);
+  border-color: rgba(79, 172, 254, 0.2);
+}
+
+.activeLang,
+.activeTheme {
+  background: rgba(79, 172, 254, 0.15) !important;
+  border-color: rgba(79, 172, 254, 0.3) !important;
+  color: #4facfe !important;
+}
+
+.settingHint {
+  font-size: 0.85rem; /* ✅ Increased from 0.8rem */
+  opacity: 0.4;
+  margin-top: 14px; /* ✅ Increased from 12px */
+  color: #e8edf5;
+}
+
+body.light .settingHint {
+  color: #1a2332;
+}
+
+/* ✅ Bigger version section */
+.versionBox {
+  display: flex;
+  align-items: center;
+  gap: 18px; /* ✅ Increased from 16px */
+  padding: 10px 0; /* ✅ Increased from 8px */
+}
+
+.versionNumber {
+  font-size: 1.6rem; /* ✅ Increased from 1.4rem */
+  font-weight: 600;
+  color: #e8edf5;
+}
+
+body.light .versionNumber {
+  color: #1a2332;
+}
+
+.versionStatus {
+  font-size: 0.85rem; /* ✅ Increased from 0.8rem */
+  padding: 6px 20px; /* ✅ Increased padding */
+  border-radius: 60px;
+  background: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .settingsPage {
+    min-height: auto;
+    padding: 8px 0 16px 0;
+  }
+  
+  .pageTitle {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .settingGroup {
+    padding: 20px 24px;
+    min-height: 140px;
+  }
+  
+  .settingGroup:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  
+  .settingLabel {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .langBtn,
+  .themeBtn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    min-width: 110px;
+  }
+  
+  .languageOptions,
+  .themeOptions {
+    gap: 12px;
+  }
+  
+  .versionNumber {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .settingsPage {
+    padding: 6px 0 12px 0;
+  }
+  
+  .pageTitle {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  
+  .settingGroup {
+    padding: 16px 18px;
+    min-height: 120px;
+  }
+  
+  .settingGroup:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  
+  .settingLabel {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .langBtn,
+  .themeBtn {
+    padding: 10px 18px;
+    font-size: 0.8rem;
+    min-width: 90px;
+  }
+  
+  .languageOptions,
+  .themeOptions {
+    gap: 10px;
+  }
+  
+  .versionNumber {
+    font-size: 1.2rem;
+  }
+  
+  .versionStatus {
+    font-size: 0.75rem;
+    padding: 4px 14px;
+  }
+  
+  .settingHint {
+    font-size: 0.75rem;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,193 @@
+/* ===== APP CONTAINER ===== */
+.appContainer {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* ===== MAIN CONTENT ===== */
+.mainContent {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border-radius: 28px;
+  padding: 28px 34px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s ease;
+  min-height: 90vh;
+  position: relative;
+}
+
+body.light .mainContent {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== BLUR EFFECT ===== */
+.mainContent.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+  transition: filter 0.3s ease;
+}
+
+/* ===== WELCOME MESSAGE ===== */
+.welcomeMessage {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.welcomeIcon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  animation: floatIcon 3.5s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
+
+.welcomeMessage h2 {
+  font-size: 2.6rem;
+  font-weight: 300;
+  margin-bottom: 12px;
+  color: #e8edf5;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.light .welcomeMessage h2 {
+  color: #1a2332;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.welcomeMessage p {
+  opacity: 0.6;
+  font-size: 1.1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  color: #e8edf5;
+}
+
+body.light .welcomeMessage p {
+  color: #1a2332;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .appContainer {
+    padding: 12px;
+    gap: 12px;
+    flex-direction: column;
+  }
+  
+  .mainContent {
+    padding: 18px 16px;
+    min-height: auto;
+    border-radius: 20px;
+  }
+  
+  .welcomeMessage h2 {
+    font-size: 1.8rem;
+  }
+  
+  .welcomeIcon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appContainer {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .mainContent {
+    padding: 14px 12px;
+    border-radius: 16px;
+  }
+  
+  .welcomeMessage h2 {
+    font-size: 1.4rem;
+  }
+  
+  .welcomeMessage p {
+    font-size: 0.9rem;
+  }
+}
+/* Add these to your existing WeatherApp.module.css */
+
+.weatherPageContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 10px;
+}
+
+.placeholderPage {
+  text-align: center;
+  padding: 80px 20px;
+  color: #e8edf5;
+}
+
+body.light .placeholderPage {
+  color: #1a2332;
+}
+
+.placeholderIcon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.placeholderPage h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.placeholderPage p {
+  opacity: 0.4;
+  font-size: 1rem;
+}
+/* Add these styles */
+
+.dashboardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.dashboardPreview {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  color: #e8edf5;
+}
+
+body.light .dashboardPreview {
+  color: #1a2332;
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,396 @@
+.weatherPage {
+  padding: 10px 0;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 80vh;
+  gap: 12px;
+}
+
+.weatherPageEmpty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #c8d0dc;
+}
+
+body.light .weatherPageEmpty {
+  color: #1a2332;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.weatherPageEmpty h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.weatherPageEmpty p {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+/* ===== CITY SECTION ===== */
+.citySection {
+  text-align: center;
+  padding: 12px 0 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+body.light .citySection {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.cityName {
+  font-size: 5.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #e8edf5;
+  margin: 0;
+}
+
+body.light .cityName {
+  color: #1a2332;
+}
+
+.country {
+  font-size: 5.1rem;
+  opacity: 0.5;
+  color: #e8edf5;
+  margin: 2px 0 0 0;
+}
+
+body.light .country {
+  color: #1a2332;
+}
+
+.date {
+  font-size: 0.9rem;
+  opacity: 0.4;
+  color: #e8edf5;
+  margin: 2px 0 0 0;
+}
+
+body.light .date {
+  color: #1a2332;
+}
+
+/* ===== WEATHER MAIN ===== */
+.weatherMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  flex-shrink: 0;
+}
+
+body.light .weatherMain {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.tempSection {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.weatherEmoji {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.temperature {
+  font-size: 5.5rem;
+  font-weight: 200;
+  line-height: 1;
+  color: #e8edf5;
+}
+
+body.light .temperature {
+  color: #1a2332;
+}
+
+.unitLabel {
+  font-size: 1.2rem;
+  opacity: 0.4;
+  font-weight: 300;
+  color: #e8edf5;
+}
+
+body.light .unitLabel {
+  color: #1a2332;
+}
+
+.conditionSection {
+  text-align: left;
+}
+
+.condition {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #e8edf5;
+  margin: 0;
+}
+
+body.light .condition {
+  color: #1a2332;
+}
+
+.dayName {
+  font-size: 1.1rem;
+  opacity: 0.4;
+  color: #e8edf5;
+  margin: 2px 0 0 0;
+}
+
+body.light .dayName {
+  color: #1a2332;
+}
+
+/* ===== DETAILS GRID (4 columns - BIGGER) ===== */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 8px 0;
+  flex: 0 1 auto;
+}
+
+/* ✅ BIGGER detail cards */
+.detailCard {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+  min-height: 110px;
+  justify-content: center;
+}
+
+body.light .detailCard {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.04);
+}
+
+.detailCard:hover {
+  transform: translateY(-3px);
+  background: rgba(79, 172, 254, 0.06);
+}
+
+.detailIcon {
+  font-size: 1.6rem;
+  color: #4facfe;
+}
+
+.detailLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.4;
+  color: #e8edf5;
+  text-align: center;
+}
+
+body.light .detailLabel {
+  color: #1a2332;
+}
+
+.detailValue {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e8edf5;
+}
+
+body.light .detailValue {
+  color: #1a2332;
+}
+
+/* ===== EXTRA DETAILS (3 columns - SAME SIZE) ===== */
+.extraDetails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 8px 0;
+  flex: 0 1 auto;
+}
+
+/* ✅ BIGGER extra cards */
+.extraCard {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+  min-height: 110px;
+  justify-content: center;
+}
+
+body.light .extraCard {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.04);
+}
+
+.extraCard:hover {
+  transform: translateY(-3px);
+  background: rgba(79, 172, 254, 0.06);
+}
+
+.extraIcon {
+  font-size: 1.6rem;
+  color: #4facfe;
+}
+
+.extraLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.4;
+  color: #e8edf5;
+  text-align: center;
+}
+
+body.light .extraLabel {
+  color: #1a2332;
+}
+
+.extraValue {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e8edf5;
+}
+
+body.light .extraValue {
+  color: #1a2332;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .weatherPage {
+    min-height: auto;
+    padding: 5px 0;
+    gap: 10px;
+  }
+
+  .cityName {
+    font-size: 2.4rem;
+  }
+  
+  .weatherMain {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 12px;
+  }
+  
+  .conditionSection {
+    text-align: center;
+  }
+  
+  .temperature {
+    font-size: 4rem;
+  }
+  
+  .weatherEmoji {
+    font-size: 3.5rem;
+  }
+  
+  .detailsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .extraDetails {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .detailCard,
+  .extraCard {
+    padding: 14px 10px;
+    min-height: 90px;
+  }
+  
+  .detailIcon,
+  .extraIcon {
+    font-size: 1.3rem;
+  }
+  
+  .detailValue,
+  .extraValue {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .weatherPage {
+    gap: 8px;
+  }
+
+  .cityName {
+    font-size: 1.8rem;
+  }
+  
+  .temperature {
+    font-size: 3rem;
+  }
+  
+  .weatherEmoji {
+    font-size: 2.6rem;
+  }
+  
+  .condition {
+    font-size: 1.2rem;
+  }
+  
+  .detailValue,
+  .extraValue {
+    font-size: 0.95rem;
+  }
+
+  .extraDetails {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .detailsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .detailCard,
+  .extraCard {
+    padding: 12px 8px;
+    min-height: 80px;
+  }
+  
+  .detailIcon,
+  .extraIcon {
+    font-size: 1.1rem;
+  }
+  
+  .detailLabel,
+  .extraLabel {
+    font-size: 0.6rem;
+  }
+}

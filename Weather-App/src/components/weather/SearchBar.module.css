@@ -1,0 +1,489 @@
+/* ===== CONTAINER ===== */
+.searchContainer {
+  width: 100%;
+}
+
+/* ===== HEADER ===== */
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburgerBtn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.light .hamburgerBtn {
+  color: #1a2332;
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.hamburgerBtn:hover {
+  background: rgba(79, 172, 254, 0.12);
+}
+
+.themeToggle {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.light .themeToggle {
+  color: #1a2332;
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.themeToggle:hover {
+  transform: rotate(20deg) scale(1.05);
+  background: rgba(79, 172, 254, 0.12);
+}
+
+/* ===== TITLE ===== */
+.titleSection {
+  text-align: center;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.titleIcon {
+  font-size: 3rem;
+  animation: floatIcon 3.5s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-8px) scale(1.05); }
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.light .mainTitle {
+  color: #1a2332;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== SEARCH FORM - Like Image 2 ===== */
+.searchForm {
+  display: flex;
+  gap: 12px;
+  margin: 0 auto 20px auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 700px;
+}
+
+.searchWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 60px;
+  padding: 4px 4px 4px 24px;
+  transition: all 0.3s ease;
+  max-width: 500px;
+  min-width: 250px;
+}
+
+body.light .searchWrapper {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.searchWrapper:focus-within {
+  border-color: #4facfe;
+  box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+}
+
+.searchIcon {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  margin-right: 4px;
+}
+
+body.light .searchIcon {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 14px 12px;
+  font-size: 1rem;
+  color: #fff;
+  outline: none;
+  min-width: 100px;
+}
+
+body.light .searchInput {
+  color: #1a2332;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 300;
+}
+
+body.light .searchInput::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.searchInput:disabled {
+  opacity: 0.5;
+}
+
+.searchButton {
+  background: linear-gradient(135deg, #4facfe, #00d2ff);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 60px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.searchButton:hover:not(:disabled) {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(79, 172, 254, 0.25);
+}
+
+.searchButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== RIGHT ACTIONS ===== */
+.rightActions {
+  display: flex;
+  gap: 10px;
+}
+
+.locationBtn {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 60px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+body.light .locationBtn {
+  color: #1a2332;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.locationBtn:hover {
+  border-color: #4facfe;
+  background: rgba(79, 172, 254, 0.08);
+}
+
+.unitToggle {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 60px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+body.light .unitToggle {
+  color: #1a2332;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.unitToggle:hover {
+  border-color: #4facfe;
+  background: rgba(79, 172, 254, 0.08);
+}
+
+/* ===== HISTORY DROPDOWN ===== */
+.historyDropdown {
+  background: rgba(20, 27, 45, 0.98);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 8px 0;
+  margin: 8px 0 12px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+body.light .historyDropdown {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 18px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.light .historyHeader {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.clearHistory {
+  background: transparent;
+  border: none;
+  color: #ff6b6b;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.clearHistory:hover {
+  color: #ff4444;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background: transparent;
+  border: none;
+  color: #e8edf5;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.9rem;
+}
+
+body.light .historyItem {
+  color: #1a2332;
+}
+
+.historyItem:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+body.light .historyItem:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.historyIcon {
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+
+/* ===== POPULAR CITIES ===== */
+.popularSection {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+body.light .sectionLabel {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.cityChips {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.popularSection .cityChip {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 60px;
+  padding: 8px 22px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+body.light .popularSection .cityChip {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: #1a2332;
+}
+
+.popularSection .cityChip:hover:not(:disabled) {
+  background: rgba(79, 172, 254, 0.12);
+  border-color: rgba(79, 172, 254, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(79, 172, 254, 0.08);
+}
+
+.popularSection .cityChip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .titleIcon {
+    font-size: 2.2rem;
+  }
+  
+  .searchForm {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+  }
+  
+  .searchWrapper {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  .rightActions {
+    justify-content: center;
+  }
+  
+  .cityChips {
+    gap: 10px;
+  }
+  
+  .popularSection .cityChip {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+  
+  .titleIcon {
+    font-size: 1.8rem;
+  }
+  
+  .hamburgerBtn {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+  }
+  
+  .themeToggle {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+  
+  .searchButton {
+    padding: 10px 18px;
+    font-size: 0.8rem;
+  }
+  
+  .searchInput {
+    font-size: 0.85rem;
+    padding: 10px 8px;
+  }
+  
+  .locationBtn,
+  .unitToggle {
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+  
+  .popularSection .cityChip {
+    padding: 5px 14px;
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,53 @@
+.weather-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: background 0.8s ease;
+  overflow: hidden;
+}
+
+.rain-container,
+.snow-container,
+.wind-container,
+.cloud-container,
+.sunny-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.rain-drop {
+  position: absolute;
+  border-radius: 50% 50% 0 0;
+}
+
+.snow-flake {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.wind-particle {
+  position: absolute;
+  border-radius: 2px;
+}
+
+.cloud {
+  position: absolute;
+  border-radius: 50px;
+}
+
+.sun-glow {
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.sun-ray {
+  border-radius: 2px;
+}
