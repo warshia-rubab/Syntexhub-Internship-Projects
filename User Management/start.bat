@@ -1,9 +1,9 @@
 @echo off
-title User Management System - Syntexhub
+title User Management System 
 color 0A
 
 echo ════════════════════════════════════════════════════
-echo     SYNTEXHUB USER MANAGEMENT SYSTEM
+echo      USER MANAGEMENT SYSTEM
 echo ════════════════════════════════════════════════════
 echo.
 
