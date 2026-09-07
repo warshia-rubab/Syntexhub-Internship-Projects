@@ -33,25 +33,31 @@ This is a **complete User Management System** built during the **Syntexhub Inter
 
 ---
 
-## 📸 Application Screenshots
+# 📸 Application Screenshots
 
 <div align="center">
 
-| Login Page | Dashboard View |
-|:----------:|:--------------:|
-| <img src="Login.png" alt="Login Page" width="400"/> | <img src="Dashboard.png" alt="Dashboard" width="400"/> |
-| *Secure login with JWT authentication* | *Analytics dashboard with charts* |
+### 🔐 Login Page
+[![Login Page](Login.png)](Login.png)
+*Secure login with JWT authentication*
 
-| User List | Side Panel |
-|:---------:|:----------:|
-| <img src="UserList.png" alt="User List" width="400"/> | <img src="SidePanel.png" alt="Side Panel" width="400"/> |
-| *Search, filter, and manage users* | *Navigation with dark/light theme* |
+---
+
+### 📊 Dashboard View
+[![Dashboard](Dashboard.png)](Dashboard.png)
+*Analytics dashboard with charts and statistics*
+
+---
+
+### 👥 User List
+[![User List](UserList.png)](UserList.png)
+*Search, filter, and manage users efficiently*
 
 </div>
 
 ---
 
-## ✨ Key Features
+# ✨ Key Features
 
 ### 🔐 Authentication & Security
 - ✅ **JWT-based Authentication** - Secure token-based login
