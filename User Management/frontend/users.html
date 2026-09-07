@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List | User Management</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/users.css?v=6" />
+</head>
+<body>
+
+    <div class="toast-container"></div>
+
+    <div class="app-wrapper">
+
+        <!-- SIDE PANEL -->
+        <aside class="side-panel">
+            <div class="side-panel-header">
+                <div class="side-panel-brand">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>User Management</span>
+                </div>
+            </div>
+
+            <nav class="side-panel-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="users.html" class="active">
+                            <i class="fas fa-users"></i>
+                            <span>User List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audit.html">
+                            <i class="fas fa-history"></i>
+                            <span>Audit Logs</span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" id="logoutSideBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="side-panel-footer">
+                <div class="user-avatar">
+                    <span id="sideAvatar">JD</span>
+                </div>
+                <div class="user-info-side">
+                    <span id="sideUserName">John Doe</span>
+                    <small id="sideUserRole">user</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content-area">
+
+            <div class="page-header">
+                <h2><i class="fas fa-users me-2"></i>User List</h2>
+                <p>Manage all users in the system</p>
+            </div>
+
+            <!-- ========================================================= -->
+            <!-- SEARCH & FILTER BAR - WITH HEADINGS                        -->
+            <!-- ========================================================= -->
+            <div class="search-filter-container">
+
+                <!-- Search Section -->
+                <div class="search-section">
+                    <label class="filter-label"><i class="fas fa-search"></i> Search</label>
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search by name, email, or role..." />
+                    </div>
+                </div>
+
+                <!-- Filters Section -->
+                <div class="filters-section">
+                    <label class="filter-label"><i class="fas fa-sliders-h"></i> Filters</label>
+                    <div class="filter-wrapper">
+                        <select id="roleFilter" class="form-select">
+                            <option value="">All Roles</option>
+                            <option value="admin">Admin</option>
+                            <option value="manager">Manager</option>
+                            <option value="user">User</option>
+                        </select>
+                        <select id="statusFilter" class="form-select">
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                        <button class="btn btn-outline-secondary" id="clearFilters">
+                            <i class="fas fa-times"></i> Clear
+                        </button>
+                        <button class="btn btn-success" id="exportBtn">
+                            <i class="fas fa-file-export"></i> Export
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Users Table -->
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5><i class="fas fa-list me-2"></i>Users <span id="visibleCount" class="badge bg-secondary ms-2">0</span></h5>
+                    <button class="btn btn-primary btn-sm" onclick="loadUsers()">
+                        <i class="fas fa-sync"></i> Refresh
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody">
+                                <tr>
+                                    <td colspan="6" class="text-center text-muted">
+                                        <i class="fas fa-spinner fa-spin me-2"></i> Loading users...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/users.js"></script>
+</body>
+</html>

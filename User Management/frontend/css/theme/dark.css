@@ -1,0 +1,43 @@
+/* ============================================
+   DARK THEME
+   ============================================ */
+
+:root {
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --bg-card: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-light: #64748B;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.card, .card-container {
+    background: var(--bg-card);
+}
+
+.navbar {
+    background: var(--bg-secondary) !important;
+}
+
+.table {
+    color: var(--text-primary);
+}
+
+.form-control {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.form-control:focus {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}

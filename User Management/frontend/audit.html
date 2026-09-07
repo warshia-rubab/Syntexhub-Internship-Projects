@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audit Logs | User Management</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/audit.css?v=3" />
+</head>
+<body>
+
+    <div class="toast-container"></div>
+
+    <div class="app-wrapper">
+
+        <!-- SIDE PANEL -->
+        <aside class="side-panel">
+            <div class="side-panel-header">
+                <div class="side-panel-brand">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>User Management</span>
+                </div>
+            </div>
+
+            <nav class="side-panel-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="users.html">
+                            <i class="fas fa-users"></i>
+                            <span>User List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audit.html" class="active">
+                            <i class="fas fa-history"></i>
+                            <span>Audit Logs</span>
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#" id="logoutSideBtn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="side-panel-footer">
+                <div class="user-avatar">
+                    <span id="sideAvatar">JD</span>
+                </div>
+                <div class="user-info-side">
+                    <span id="sideUserName">John Doe</span>
+                    <small id="sideUserRole">user</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content-area">
+
+            <!-- ============================================ -->
+            <!-- PAGE HEADER - Like Profile Page              -->
+            <!-- ============================================ -->
+            <div class="page-header">
+                <div class="header-left">
+                    <h2><i class="fas fa-history me-2"></i>Audit Logs</h2>
+                    <p>Track all user activities and system events</p>
+                </div>
+                <div class="header-right">
+                    <span class="last-updated">
+                        <i class="fas fa-clock"></i> 
+                        Last updated: <span id="lastUpdated">Just now</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- STATS CARDS                                   -->
+            <!-- ============================================ -->
+            <div class="audit-stats">
+                <div class="stat-box">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="totalLogs">0</span>
+                        <span class="stat-label">Total Events</span>
+                    </div>
+                    <div class="stat-trend">
+                        <i class="fas fa-arrow-up"></i> 12%
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="todayLogs">0</span>
+                        <span class="stat-label">Today</span>
+                    </div>
+                    <div class="stat-trend">
+                        <i class="fas fa-arrow-up"></i> 8%
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon red">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="errorLogs">0</span>
+                        <span class="stat-label">Errors</span>
+                    </div>
+                    <div class="stat-trend negative">
+                        <i class="fas fa-arrow-down"></i> 3%
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon green">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-number" id="uniqueUsers">0</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat-trend">
+                        <i class="fas fa-arrow-up"></i> 5%
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- FILTER BAR                                    -->
+            <!-- ============================================ -->
+            <div class="audit-filters">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="auditSearch" placeholder="Search logs..." />
+                </div>
+                <select id="auditLevel" class="form-select">
+                    <option value="">All Levels</option>
+                    <option value="INFO">Info</option>
+                    <option value="WARNING">Warning</option>
+                    <option value="ERROR">Error</option>
+                </select>
+                <button class="btn btn-primary" id="refreshAudit">
+                    <i class="fas fa-sync"></i> Refresh
+                </button>
+                <button class="btn btn-danger" id="clearAudit">
+                    <i class="fas fa-trash"></i> Clear
+                </button>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- LOGS TABLE                                    -->
+            <!-- ============================================ -->
+            <div class="audit-table-container">
+                <table class="audit-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Timestamp</th>
+                            <th>Level</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>IP Address</th>
+                        </tr>
+                    </thead>
+                    <tbody id="auditTableBody">
+                        <tr>
+                            <td colspan="6" class="text-center text-muted">
+                                <i class="fas fa-spinner fa-spin me-2"></i> Loading logs...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- TABLE FOOTER                                  -->
+            <!-- ============================================ -->
+            <div class="audit-footer">
+                <span>
+                    <i class="fas fa-database"></i> 
+                    Showing <span id="showingCount">0</span> entries
+                </span>
+                <span>
+                    <i class="fas fa-clock"></i> 
+                    Last 24 hours: <span id="last24hCount">0</span>
+                </span>
+                <span>
+                    <i class="fas fa-file-alt"></i> 
+                    Total: <span id="totalCount">0</span> records
+                </span>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/audit.js"></script>
+</body>
+</html>

@@ -1,0 +1,962 @@
+/* ============================================
+   USER LIST PAGE STYLES
+   ============================================ */
+
+/* ============================================
+   SEARCH & FILTER CONTAINER
+   ============================================ */
+
+.search-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px 24px;
+    background: #FFFFFF;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* ============================================
+   SECTION LABELS
+   ============================================ */
+
+.section-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.section-label i {
+    color: #6C3CE1;
+    margin-right: 6px;
+    font-size: 12px;
+}
+
+/* ============================================
+   SEARCH SECTION
+   ============================================ */
+
+.search-section {
+    flex: 2;
+    min-width: 180px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 0 14px;
+    transition: all 0.3s;
+}
+
+.search-box:focus-within {
+    border-color: #6C3CE1;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(108, 60, 225, 0.06);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 9px 0;
+    font-size: 14px;
+    color: #1E293B;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.search-box input::placeholder {
+    color: #94A3B8;
+}
+
+/* ============================================
+   FILTERS SECTION
+   ============================================ */
+
+.filters-section {
+    flex: 1.5;
+    min-width: 200px;
+}
+
+.filters-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-select {
+    flex: 1;
+    min-width: 100px;
+    padding: 9px 34px 9px 14px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background: #F8FAFC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 12px center;
+    background-size: 12px;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #1E293B;
+}
+
+.filter-select:focus {
+    border-color: #6C3CE1;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(108, 60, 225, 0.06);
+    outline: none;
+}
+
+/* ============================================
+   ACTIONS SECTION
+   ============================================ */
+
+.actions-section {
+    flex: 0.8;
+    min-width: 120px;
+}
+
+.actions-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn-clear {
+    padding: 9px 16px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    flex: 1;
+    justify-content: center;
+}
+
+.btn-clear:hover {
+    background: #E2E8F0;
+    color: #1E293B;
+    border-color: #CBD5E1;
+}
+
+.btn-export {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #10B981;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    flex: 1;
+    justify-content: center;
+}
+
+.btn-export:hover {
+    background: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ============================================
+   CARD & TABLE
+   ============================================ */
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.card-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card-header h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E293B;
+    margin: 0;
+}
+
+.card-header h5 i {
+    color: #6C3CE1;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.table {
+    font-size: 14px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.table th {
+    background: #F8FAFC;
+    font-weight: 600;
+    color: #475569;
+    padding: 14px 20px;
+    border-bottom: 2px solid #E2E8F0;
+    text-align: left;
+}
+
+.table td {
+    padding: 14px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.table tbody tr:hover {
+    background: #F8FAFC;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge.active {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.status-badge.inactive {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+/* Action Buttons */
+.btn-outline-warning {
+    border: 1px solid #F59E0B;
+    color: #F59E0B;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.btn-outline-warning:hover {
+    background: #F59E0B;
+    color: #FFFFFF;
+}
+
+.btn-outline-danger {
+    border: 1px solid #EF4444;
+    color: #EF4444;
+    background: transparent;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.btn-outline-danger:hover {
+    background: #EF4444;
+    color: #FFFFFF;
+}
+
+/* Toast */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 380px;
+}
+
+.toast-message {
+    padding: 14px 20px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateX(120%);
+    animation: slideIn 0.4s ease forwards;
+}
+
+.toast-message.success { background: #10B981; }
+.toast-message.error { background: #EF4444; }
+
+@keyframes slideIn {
+    to { transform: translateX(0); }
+}
+@keyframes slideOut {
+    to { transform: translateX(120%); opacity: 0; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 992px) {
+    .search-filter-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 16px;
+    }
+
+    .search-section,
+    .filters-section,
+    .actions-section {
+        flex: 1;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .filters-row {
+        flex-wrap: wrap;
+    }
+
+    .filter-select {
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .actions-row {
+        flex-wrap: wrap;
+    }
+
+    .btn-clear,
+    .btn-export {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-filter-container {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .filters-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .actions-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-clear,
+    .btn-export {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}
+/* ============================================
+   USER LIST PAGE STYLES
+   ============================================ */
+
+/* ============================================
+   SEARCH & FILTER CONTAINER
+   ============================================ */
+
+.search-filter-container {
+    background: #F8FAFC;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    align-items: flex-start;
+}
+
+/* Search Section */
+.search-section {
+    flex: 2;
+    min-width: 240px;
+}
+
+.filters-section {
+    flex: 3;
+    min-width: 320px;
+}
+
+/* Filter Label */
+.filter-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+.filter-label i {
+    color: #6C3CE1;
+    margin-right: 6px;
+}
+
+/* Search Input */
+.search-input-wrapper {
+    position: relative;
+}
+
+.search-input-wrapper i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 10px 14px 10px 40px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 10px;
+    font-size: 14px;
+    background: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-input-wrapper input:focus {
+    border-color: #6C3CE1;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(108, 60, 225, 0.08);
+}
+
+/* Filter Wrapper */
+.filter-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.filter-wrapper .form-select {
+    padding: 10px 14px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 10px;
+    font-size: 14px;
+    background: white;
+    min-width: 130px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    flex: 1;
+    max-width: 160px;
+}
+
+.filter-wrapper .form-select:focus {
+    border-color: #6C3CE1;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(108, 60, 225, 0.08);
+}
+
+.filter-wrapper .btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-outline-secondary {
+    border: 1.5px solid #E2E8F0;
+    color: #64748B;
+    background: white;
+}
+
+.btn-outline-secondary:hover {
+    background: #E2E8F0;
+    color: #1E293B;
+}
+
+.btn-success {
+    background: #10B981;
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ============================================
+   CARD & TABLE
+   ============================================ */
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.card-header {
+    background: white;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 16px 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card-header h5 {
+    margin: 0;
+    font-size: 16px;
+    color: #1E293B;
+}
+
+.card-header h5 i {
+    color: #6C3CE1;
+}
+
+.card-header .badge {
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    font-size: 14px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.table th {
+    background: #F8FAFC;
+    font-weight: 600;
+    color: #475569;
+    padding: 14px 20px;
+    border-bottom: 2px solid #E2E8F0;
+    text-align: left;
+}
+
+.table td {
+    padding: 14px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.table tbody tr:hover {
+    background: #F8FAFC;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge.active {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.status-badge.inactive {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+/* Role Badges */
+.badge {
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px 12px;
+}
+
+.bg-danger {
+    background: #EF4444 !important;
+}
+.bg-warning {
+    background: #F59E0B !important;
+}
+.bg-info {
+    background: #3B82F6 !important;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.btn-outline-warning {
+    border: 1px solid #F59E0B;
+    color: #F59E0B;
+    background: transparent;
+}
+
+.btn-outline-warning:hover {
+    background: #F59E0B;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-outline-danger {
+    border: 1px solid #EF4444;
+    color: #EF4444;
+    background: transparent;
+}
+
+.btn-outline-danger:hover {
+    background: #EF4444;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Toast */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 380px;
+}
+
+.toast-message {
+    padding: 14px 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateX(120%);
+    animation: slideIn 0.4s ease forwards;
+}
+
+.toast-message.success { background: #10B981; }
+.toast-message.error { background: #EF4444; }
+.toast-message.warning { background: #F59E0B; }
+.toast-message.info { background: #3B82F6; }
+
+@keyframes slideIn {
+    to { transform: translateX(0); }
+}
+@keyframes slideOut {
+    to { transform: translateX(120%); opacity: 0; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 992px) {
+    .search-filter-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .search-section,
+    .filters-section {
+        flex: 1;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .filter-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .filter-wrapper .form-select {
+        flex: 1;
+        min-width: 120px;
+        max-width: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-filter-container {
+        padding: 16px;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-wrapper .form-select {
+        width: 100%;
+        max-width: unset;
+    }
+
+    .filter-wrapper .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+/* ============================================
+   USER LIST - REMOVED WHITE BACKGROUNDS
+   ============================================ */
+
+/* Card - Remove white background */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    background: transparent !important; /* ✅ Removed white */
+}
+
+/* Card Header - Remove white background */
+.card-header {
+    background: transparent !important; /* ✅ Removed white */
+    border-bottom: 1px solid #E2E8F0;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.card-header h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1E293B;
+    margin: 0;
+}
+
+.card-header h5 i {
+    color: #6C3CE1;
+}
+
+/* Card Body - Remove white background */
+.card-body {
+    padding: 0;
+    background: #F1F5F9; /* ✅ Removed white */
+}
+
+/* Table - Remove white background */
+.table {
+    font-size: 14px;
+    margin-bottom: 0;
+    width: 100%;
+    background: #FFFFFF; /* ✅ Removed white */
+}
+
+.table th {
+    background: #FFFFFF;
+    font-weight: 600;
+    color: #475569;
+    padding: 14px 20px;
+    border-bottom: 2px solid #E2E8F0;
+    text-align: left;
+}
+
+.table td {
+    padding: 14px 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #F1F5F9;
+    background: transparent !important; /* ✅ Removed white */
+}
+
+.table tbody tr {
+    background: #FFFFFF; /* ✅ Removed white */
+}
+
+.table tbody tr:hover {
+    background: #FFFFFF; /* ✅ Removed white */
+}
+
+/* Table Striped - Remove white background */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background: rgba(0, 0, 0, 0.02) !important; /* ✅ Light gray instead of white */
+}
+
+/* ============================================
+   DARK MODE - User List
+   ============================================ */
+
+[data-theme="dark"] .card {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .card-header {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .card-header h5 {
+    color: #F1F5F9;
+}
+
+[data-theme="dark"] .card-header h5 i {
+    color: #8B5CF6;
+}
+
+[data-theme="dark"] .card-body {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .table {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .table th {
+    background: rgba(255, 255, 255, 0.03);
+    color: #94A3B8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #F1F5F9;
+    background: transparent !important;
+}
+
+[data-theme="dark"] .table tbody tr {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+/* ============================================
+   SEARCH & FILTER LABELS - WHITE & BOLD
+   ============================================ */
+
+.section-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF !important;   /* ✅ White */
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.section-label i {
+    color: #8B5CF6;              /* Purple icon */
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+/* Light Mode - Keep white */
+body:not([data-theme="dark"]) .section-label {
+    color: #FFFFFF !important;   /* Dark text in light mode */
+}
+
+/* Dark Mode - White & Bold */
+[data-theme="dark"] .section-label {
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .section-label i {
+    color: #8B5CF6;
+}
+/* Dark Mode - White, Bold, Larger */
+[data-theme="dark"] .search-section label,
+[data-theme="dark"] .filters-section label {
+    color: #FFFFFF !important;    /* White text */
+    font-size: 16px !important;   /* Larger font */
+    font-weight: 700 !important;  /* Bold */
+}

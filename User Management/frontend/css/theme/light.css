@@ -1,0 +1,28 @@
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+
+:root {
+    --bg-primary: #F8FAFC;
+    --bg-secondary: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --text-light: #94A3B8;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.card, .card-container {
+    background: var(--bg-card);
+}
+
+.navbar {
+    background: var(--bg-secondary) !important;
+}
