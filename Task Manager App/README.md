@@ -78,7 +78,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 <summary>🔐 <strong>Login Page (Dark Mode)</strong></summary>
 <br>
 
-![Login Page](login.png)
+![Login Page](Login.png)
 
 </details>
 
@@ -86,7 +86,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 <summary>📊 <strong>Dashboard</strong></summary>
 <br>
 
-![Dashboard](dashboard.png)
+![Dashboard](Dashboard.png)
 
 </details>
 
@@ -102,7 +102,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 <summary>📋 <strong>Task List</strong></summary>
 <br>
 
-![Task List](task-list.png)
+![Task List](Logs.png)
 
 </details>
 
