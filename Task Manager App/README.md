@@ -1,8 +1,6 @@
-# 🚀 TaskFlow Pro
+# 🚀 Task Manager App
 
 <div align="center">
-
-![TaskFlow Pro Banner](https://img.shields.io/badge/TaskFlow-Pro-667eea?style=for-the-badge&logo=rocket&logoColor=white)
 
 **A Professional Full-Stack Task Management Application**
 
@@ -11,8 +9,6 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://github.com/yourusername/Syntexhub_TaskManager_App)
 [![MySQL](https://img.shields.io/badge/MySQL-Logs-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://github.com/yourusername/Syntexhub_TaskManager_App)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
-
-[Live Demo](https://youtu.be/9K6Z4LHcR-Y) • [Report Bug](https://github.com/yourusername/Syntexhub_TaskManager_App/issues) • [Request Feature](https://github.com/yourusername/Syntexhub_TaskManager_App/issues)
 
 </div>
 
@@ -82,7 +78,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 <summary>🔐 <strong>Login Page (Dark Mode)</strong></summary>
 <br>
 
-![Login Page](./screenshots/login-dark.png)
+![Login Page](login.png)
 
 </details>
 
@@ -90,7 +86,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 <summary>📊 <strong>Dashboard</strong></summary>
 <br>
 
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](dashboard.png)
 
 </details>
 
@@ -98,7 +94,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 <summary>➕ <strong>Create Task</strong></summary>
 <br>
 
-![Create Task](./screenshots/create-task.png)
+![Create Task](MyFirstTask.png)
 
 </details>
 
@@ -106,7 +102,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 <summary>📋 <strong>Task List</strong></summary>
 <br>
 
-![Task List](./screenshots/task-list.png)
+![Task List](task-list.png)
 
 </details>
 
