@@ -1,6 +1,6 @@
-# 🚀 Task Manager App
-
 <div align="center">
+  
+# 🚀 Task Manager App
 
 **A Professional Full-Stack Task Management Application**
 
@@ -15,7 +15,7 @@
 ---
 
 
-## 🎯 About The Project
+# 🎯 About The Project
 
 **TaskFlow Pro** is a professional, enterprise-grade task management application built with the MERN stack. It was developed as part of the **SyntexHub Web Development Internship Program** and demonstrates advanced full-stack development skills including secure authentication, RESTful API design, database management, and modern UI/UX.
 
@@ -25,7 +25,7 @@ The application features a **dual-database architecture** — MongoDB for storin
 
 ---
 
-## ✨ Key Features
+# ✨ Key Features
 
 <table>
 <tr>
@@ -68,47 +68,31 @@ The application features a **dual-database architecture** — MongoDB for storin
 
 ---
 
-## 🎥 Live Demo
+# Screenshots
 
-**Watch the complete project demo:** [https://youtu.be/9K6Z4LHcR-Y](https://youtu.be/9K6Z4LHcR-Y)
+<strong>🔐 Login Page (Dark Mode)</strong><br>
 
-### Demo Screenshots
+ <p align="center"> 
+  <img src="Login.png" alt="Login Page" width="300">
+</p>
 
-<details>
-<summary>🔐 <strong>Login Page (Dark Mode)</strong></summary>
-<br>
 
-![Login Page](Login.png)
+  <strong>📊 Dashboard</strong><br>
 
-</details>
+  <p align="center">
+  <img src="Dashboard.png" alt="Dashboard" width="500">
+</p>
 
-<details>
-<summary>📊 <strong>Dashboard</strong></summary>
-<br>
 
-![Dashboard](Dashboard.png)
+  <strong>📋 Task List</strong><br>
 
-</details>
-
-<details>
-<summary>➕ <strong>Create Task</strong></summary>
-<br>
-
-![Create Task](MyFirstTask.png)
-
-</details>
-
-<details>
-<summary>📋 <strong>Task List</strong></summary>
-<br>
-
-![Task List](Logs.png)
-
-</details>
+  <p align="center">
+  <img src="Logs.png" alt="Logs" width="500">
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 ### Frontend
 | Technology | Purpose |
@@ -139,41 +123,42 @@ The application features a **dual-database architecture** — MongoDB for storin
 ---
 
 ## 🏗️ Architecture
+```
 ┌─────────────────────────────────────────────────────────────┐
-│ FRONTEND (React + Vite) │
-│ http://localhost:5173 │
-│ │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ │
-│ │ Login │ │ Signup │ │Dashboard │ │Task Mgmt │ │
-│ └──────────┘ └──────────┘ └──────────┘ └──────────┘ │
+│ FRONTEND (React + Vite)                                     │                                    
+│ http://localhost:5173                                       │
+│                                                             │
+│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐         │
+│ │   Login  │ │  Signup  │ │Dashboard│  │Task Mgmt │         │
+│ └──────────┘ └──────────┘ └──────────┘ └──────────┘         │
 └──────────────────────────┬──────────────────────────────────┘
 │
 Axios HTTP Requests
 │
 ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ BACKEND (Node + Express) │
-│ http://localhost:5000 │
-│ │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ │
-│ │ /auth │ │ /tasks │ │ JWT │ │ Bcrypt │ │
-│ │ Routes │ │ Routes │ │ Auth │ │ Hash │ │
-│ └──────────┘ └──────────┘ └──────────┘ └──────────┘ │
+│ BACKEND (Node + Express)                                    │
+│ http://localhost:5000                                       │
+│                                                             │
+│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐         │
+│ │ /auth    │ │ /tasks   │ │ JWT      │ │ Bcrypt   │         │
+│ │ Routes   │ │ Routes   │ │ Auth     │ │ Hash     │         │
+│ └──────────┘ └──────────┘ └──────────┘ └──────────┘         │
 └──────────────┬───────────────────────────┬──────────────────┘
 │ │
 ▼ ▼
 ┌──────────────────┐ ┌──────────────────┐
-│ MongoDB │ │ MySQL │
-│ (User & Tasks) │ │ (Activity Logs) │
+│ MongoDB          │ │ MySQL            │
+│ (User & Tasks)   │ │ (Activity Logs)  │
 └──────────────────┘ └──────────────────┘
 
-text
+```
 
 ---
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
-### Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -183,19 +168,22 @@ Before you begin, ensure you have the following installed:
 - **XAMPP** (for MySQL) — [Download](https://www.apachefriends.org/)
 - **Git** — [Download](https://git-scm.com/)
 
-### Installation
+## Installation
 
-**1. Clone the repository**
+1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/Syntexhub_TaskManager_App.git
 cd Syntexhub_TaskManager_App
-2. Setup Backend
+```
 
-bash
+2. Setup Backend
+```bash
 cd backend
 npm install
-Create a .env file in the backend folder:
+```
 
+Create a .env file in the backend folder:
+```
 env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/taskflow
@@ -204,100 +192,123 @@ MYSQL_HOST=localhost
 MYSQL_USER=root
 MYSQL_PASSWORD=
 MYSQL_DATABASE=taskflow_logs
-3. Setup Frontend
+```
 
-bash
+3. Setup Frontend
+```bash
 cd ../frontend
 npm install
+```
+
 4. Setup MySQL Database
-
-Open XAMPP Control Panel
-
-Start Apache and MySQL
-
-Open phpMyAdmin: http://localhost/phpmyadmin
-
-Create a new database named taskflow_logs
-
+```
+1. Open XAMPP Control Panel
+2. Start Apache and MySQL
+3. Open phpMyAdmin: http://localhost/phpmyadmin
+4. Create a new database named taskflow_logs
+```
+   
 5. Setup MongoDB
-
+```
 Start MongoDB Compass
-
 Connect to mongodb://localhost:27017
-
 Create a new database named taskflow
-
-Running the Application
-Terminal 1 — Start MongoDB:
-
-bash
+```
+6. Running the Application
+   
+A. Terminal 1 — Start MongoDB:
+```bash
 mongod --dbpath "C:\data\db"
-Terminal 2 — Start MySQL:
+```
+B. Terminal 2 — Start MySQL:
 
-text
+```text
 Open XAMPP Control Panel → Start MySQL
-Terminal 3 — Start Backend:
-
-bash
+```
+C. Terminal 3 — Start Backend:
+```bash
 cd backend
 npm run dev
-Terminal 4 — Start Frontend:
-
-bash
+```
+D. Terminal 4 — Start Frontend:
+```bash
 cd frontend
 npm run dev
-Open your browser:
-
-text
+```
+7. Open your browser:
+```text
 http://localhost:5173
-💻 Usage
-1. Register a New Account
+```
+---
+
+# 💻 Usage
+
+### 1. Register a New Account
+   
 Navigate to /register and create a new account with your name, email, and password.
 
-2. Login
+### 2. Login
+   
 Use your credentials on /login to sign in. You'll be redirected to the Dashboard.
 
-3. Create Tasks
-Click "+ New Task" to create a task with:
+### 3. Create Tasks
+   
+. Click "+ New Task" to create a task with:
 
-Title (required)
+. Title (required)
 
-Description
+. Description
 
-Status: Pending / In Progress / Completed
+. Status: Pending / In Progress / Completed
 
-Priority: Low / Medium / High
+. Priority: Low / Medium / High
 
-Due Date
+. Due Date
 
-4. Manage Tasks
-View all tasks → Sidebar → "All Tasks"
+### 4. Manage Tasks
 
-Filter tasks → By status (Pending, In Progress, Completed)
+. View all tasks → Sidebar → "All Tasks"
 
-Search tasks → Search bar on the task list page
+. Filter tasks → By status (Pending, In Progress, Completed)
 
-Edit task → Click "Edit" on any task
+. Search tasks → Search bar on the task list page
 
-Delete task → Click "Delete" and confirm
+. Edit task → Click "Edit" on any task
 
-5. Toggle Theme
+. Delete task → Click "Delete" and confirm
+
+### 5. Toggle Theme
+
 Click the 🌙/☀️ button in the top-right corner to switch between dark and light modes.
 
-🔌 API Endpoints
-Authentication
-Method	Endpoint	Description	Auth Required
-POST	/api/auth/register	Register a new user	❌
-POST	/api/auth/login	Login with credentials	❌
-GET	/api/auth/me	Get current user	✅
-Tasks
-Method	Endpoint	Description	Auth Required
-GET	/api/tasks	Get all tasks for user	✅
-POST	/api/tasks	Create a new task	✅
-PUT	/api/tasks/:id	Update a task	✅
-DELETE	/api/tasks/:id	Delete a task	✅
-Example Request
-bash
+---
+
+# 🔌 API Endpoints
+
+```markdown
+## API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description | Auth Required |
+|---|---|---|---|
+| `POST` | `/api/auth/register` | Register a new user | ❌ |
+| `POST` | `/api/auth/login` | Login with credentials | ❌ |
+| `GET` | `/api/auth/me` | Get current user | ✅ |
+
+### Tasks
+
+| Method | Endpoint | Description | Auth Required |
+|---|---|---|---|
+| `GET` | `/api/tasks` | Get all tasks for user | ✅ |
+| `POST` | `/api/tasks` | Create a new task | ✅ |
+| `PUT` | `/api/tasks/:id` | Update a task | ✅ |
+| `DELETE` | `/api/tasks/:id` | Delete a task | ✅ |
+```
+---
+
+## Example Request
+```bash
 # Register
 curl -X POST http://localhost:5000/api/auth/register \
   -H "Content-Type: application/json" \
@@ -311,8 +322,12 @@ curl -X POST http://localhost:5000/api/auth/login \
 # Get Tasks (with token)
 curl http://localhost:5000/api/tasks \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
-📁 Project Structure
-text
+```
+---
+
+# 📁 Project Structure
+
+```text
 Syntexhub_TaskManager_App/
 │
 ├── backend/
@@ -365,87 +380,57 @@ Syntexhub_TaskManager_App/
 ├── .gitignore
 ├── README.md
 └── start-all.bat                 # One-click launcher
-📸 Screenshots
-🔐 Login Page (Dark Mode)
-https://via.placeholder.com/800x400/13111c/ffffff?text=Login+Page+-+Dark+Mode
+```
+---
+# 🤝 Contributing
 
-📊 Dashboard
-https://via.placeholder.com/800x400/0f0e17/ffffff?text=Dashboard+with+Stats
-
-➕ Create Task
-https://via.placeholder.com/800x400/16213e/ffffff?text=Create+New+Task
-
-🌙 Dark Mode
-https://via.placeholder.com/800x400/1a1a2e/ffffff?text=Dark+Mode
-
-💡 Tip: Replace these placeholder images with your actual screenshots after uploading them to the repository.
-
-🗺️ Roadmap
-✅ Completed (v1.0.0)
-☑ User Authentication (JWT)
-☑ Task CRUD Operations
-☑ Dashboard with Statistics
-☑ Dark/Light Theme
-☑ Search & Filter
-☑ MySQL Activity Logs
-☑ Responsive Design
-🚧 In Progress (v1.1.0)
-□ Email verification
-□ Password reset functionality
-□ Task categories/tags
-□ Drag & drop task reordering
-□ User profile page
-🔮 Planned (v2.0.0)
-□ Team collaboration
-□ Task reminders (email/push)
-□ File attachments
-□ Kanban board view
-□ Calendar view
-□ Analytics dashboard
-□ Export to PDF/CSV
-🤝 Contributing
 Contributions are what make the open-source community amazing. Any contributions you make are greatly appreciated.
 
-Fork the Project
+1. Fork the Project
 
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
 
-Commit your Changes (git commit -m 'Add some AmazingFeature')
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
 
-Push to the Branch (git push origin feature/AmazingFeature)
+4. Push to the Branch (git push origin feature/AmazingFeature)
 
-Open a Pull Request
+5. Open a Pull Request
 
-📄 License
+# 📄 License
+
 Distributed under the MIT License. See LICENSE for more information.
 
-📬 Contact
-Your Name — Your LinkedIn
+# 📬 Contact
 
-Project Link — https://github.com/yourusername/Syntexhub_TaskManager_App
+Your Name — https://www.linkedin.com/in/warshia-rubab-3191b039b/
+
+Project Link — https://github.com/warshia-rubab/Syntexhub_TaskManager_App
 
 Demo Video — https://youtu.be/9K6Z4LHcR-Y
 
-🙏 Acknowledgments
-SyntexHub — For the internship opportunity
+---
 
-React — Frontend library
+# 🙏 Acknowledgments
 
-Node.js — Backend runtime
+1. SyntexHub — For the internship opportunity
 
-MongoDB — Database
+2. React — Frontend library
 
-MongoDB Compass — GUI for MongoDB
+3. Node.js — Backend runtime
 
-Shields.io — For the badges
+4. MongoDB — Database
 
-Best-README-Template — For the template inspiration
+5. MongoDB Compass — GUI for MongoDB
+
+6. Shields.io — For the badges
+
+7. Best-README-Template — For the template inspiration
+
+---
 
 <div align="center">
 ⭐ If you found this project helpful, please give it a star!
+  
 Built with ❤️ during the SyntexHub Internship Program
 
-https://img.shields.io/badge/Made%2520with-%E2%9D%A4%EF%B8%8F-red?style=for-the-badge
-https://img.shields.io/badge/SyntexHub-Internship-667eea?style=for-the-badge
-
-</div> ```
+</div> 
