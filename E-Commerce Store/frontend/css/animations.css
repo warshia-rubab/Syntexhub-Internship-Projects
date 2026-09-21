@@ -1,0 +1,54 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--primary-glow); }
+  50% { box-shadow: 0 0 0 12px transparent; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.fade-in { animation: fadeIn 0.5s ease forwards; }
+.slide-up { animation: slideUp 0.6s ease forwards; }
+.scale-in { animation: scaleIn 0.4s ease forwards; }
+.float { animation: float 3s ease-in-out infinite; }
+
+.stagger > * { opacity: 0; animation: fadeIn 0.5s ease forwards; }
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger > *:nth-child(7) { animation-delay: 0.35s; }
+.stagger > *:nth-child(8) { animation-delay: 0.4s; }
+
+.hover-lift { transition: transform var(--transition), box-shadow var(--transition); }
+.hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.hover-scale { transition: transform var(--transition); }
+.hover-scale:hover { transform: scale(1.05); }
+
+.link-underline { position: relative; }
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width var(--transition);
+}
+.link-underline:hover::after { width: 100%; }

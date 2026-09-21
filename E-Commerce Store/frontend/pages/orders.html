@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Orders — ShopHub</title>
+<link rel="stylesheet" href="/css/theme.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/index.html" class="navbar-brand">Shop<span>Hub</span></a>
+  <ul class="navbar-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/pages/home.html">Products</a></li>
+    <li><a href="/pages/orders.html" class="active">Orders</a></li>
+    <li><a href="/pages/about.html">About</a></li>
+  </ul>
+  <div id="navbarActions" class="navbar-actions"></div>
+</nav>
+
+<section class="page container">
+  <div class="page-header">
+    <h1 class="page-title">My Orders</h1>
+    <p class="page-subtitle">Track your purchases</p>
+  </div>
+  <div id="ordersList"></div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">© 2026 ShopHub. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="/js/api.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/orders.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/navbar.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!requireAuth()) return;
+    loadMyOrders();
+  });
+</script>
+</body>
+</html>

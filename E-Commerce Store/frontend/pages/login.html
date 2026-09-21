@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In — ShopHub</title>
+<link rel="stylesheet" href="/css/theme.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/animations.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-layout">
+
+  <!-- Left: Brand Panel -->
+  <aside class="auth-brand">
+    <a href="/index.html" class="auth-brand-logo">Shop<span>Hub</span></a>
+
+    <div class="auth-brand-content">
+      <h2 class="auth-brand-title">Premium Technology,<br>Delivered to Your Door.</h2>
+      <p class="auth-brand-subtitle">Join thousands of happy customers shopping the latest smartphones, laptops, audio gear, and accessories.</p>
+
+      <ul class="auth-features">
+        <li>
+          <span class="auth-feature-icon">🚚</span>
+          <div>
+            <strong>Free 2-Day Shipping</strong>
+            <p>On orders over $99</p>
+          </div>
+        </li>
+        <li>
+          <span class="auth-feature-icon">🔒</span>
+          <div>
+            <strong>Secure Checkout</strong>
+            <p>Bank-level encryption</p>
+          </div>
+        </li>
+        <li>
+          <span class="auth-feature-icon">↩️</span>
+          <div>
+            <strong>30-Day Returns</strong>
+            <p>No questions asked</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="auth-brand-footer">
+      <p>"The best online electronics store I've used. Fast delivery, great prices."</p>
+      <span class="auth-brand-author">— Sarah M., Verified Customer</span>
+    </div>
+  </aside>
+
+  <!-- Right: Form Panel -->
+  <main class="auth-form-panel">
+    <button class="btn-icon auth-theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+
+    <div class="auth-form-wrap">
+      <h1 class="auth-form-title">Welcome Back</h1>
+      <p class="auth-form-subtitle">Sign in to continue shopping</p>
+
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <input type="email" id="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <div class="auth-label-row">
+            <label class="form-label" for="password">Password</label>
+            <a href="#" class="auth-forgot">Forgot password?</a>
+          </div>
+          <input type="password" id="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg auth-submit">
+          Sign In
+        </button>
+      </form>
+
+      <div class="auth-divider">
+        <span>New to ShopHub?</span>
+      </div>
+
+      <a href="/pages/register.html" class="btn btn-outline btn-block btn-lg">
+        Create an account
+      </a>
+
+      <p class="auth-legal">
+        By signing in you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+      </p>
+    </div>
+  </main>
+
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>

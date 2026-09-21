@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account — ShopHub</title>
+<link rel="stylesheet" href="/css/theme.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/animations.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-layout">
+
+  <!-- Left: Brand Panel -->
+  <aside class="auth-brand">
+    <a href="/index.html" class="auth-brand-logo">Shop<span>Hub</span></a>
+
+    <div class="auth-brand-content">
+      <h2 class="auth-brand-title">Join ShopHub Today.</h2>
+      <p class="auth-brand-subtitle">Create your account and unlock exclusive member pricing, faster checkout, and order tracking.</p>
+
+      <ul class="auth-features">
+        <li>
+          <span class="auth-feature-icon">🎁</span>
+          <div>
+            <strong>Member-Only Deals</strong>
+            <p>Save up to 30% on select items</p>
+          </div>
+        </li>
+        <li>
+          <span class="auth-feature-icon">⚡</span>
+          <div>
+            <strong>1-Click Checkout</strong>
+            <p>Save your details, order faster</p>
+          </div>
+        </li>
+        <li>
+          <span class="auth-feature-icon">📦</span>
+          <div>
+            <strong>Order Tracking</strong>
+            <p>Real-time updates on every order</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="auth-brand-footer">
+      <p>"ShopHub made upgrading my home office effortless."</p>
+      <span class="auth-brand-author">— Ahmed K., Verified Customer</span>
+    </div>
+  </aside>
+
+  <!-- Right: Form Panel -->
+  <main class="auth-form-panel">
+    <button class="btn-icon auth-theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+
+    <div class="auth-form-wrap">
+      <h1 class="auth-form-title">Create Account</h1>
+      <p class="auth-form-subtitle">Get started in less than a minute</p>
+
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label class="form-label" for="name">Full name</label>
+          <input type="text" id="name" class="form-input" placeholder="John Doe" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <input type="email" id="email" class="form-input" placeholder="you@example.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="At least 6 characters" minlength="6" required autocomplete="new-password">
+          <p class="auth-hint">Use 6 or more characters with a mix of letters and numbers.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg auth-submit">
+          Create Account
+        </button>
+      </form>
+
+      <div class="auth-divider">
+        <span>Already have an account?</span>
+      </div>
+
+      <a href="/pages/login.html" class="btn btn-outline btn-block btn-lg">
+        Sign in instead
+      </a>
+
+      <p class="auth-legal">
+        By creating an account you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+      </p>
+    </div>
+  </main>
+
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/auth.js"></script>
+</body>
+</html>
